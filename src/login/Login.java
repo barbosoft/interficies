@@ -31,11 +31,21 @@ public class Login extends javax.swing.JFrame {
         logoname = new javax.swing.JLabel();
         logo = new javax.swing.JLabel();
         citybg = new javax.swing.JLabel();
+        logo_nom_empresa = new javax.swing.JLabel();
+        inici_sessio = new javax.swing.JLabel();
+        usuariLabel = new javax.swing.JLabel();
+        usuariTextField = new javax.swing.JTextField();
+        nomSeparator = new javax.swing.JSeparator();
+        passSeparator = new javax.swing.JSeparator();
+        passLabel = new javax.swing.JLabel();
+        passwordField = new javax.swing.JPasswordField();
+        entrarPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoname.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
@@ -52,22 +62,70 @@ public class Login extends javax.swing.JFrame {
         citybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/city.png"))); // NOI18N
         bg.add(citybg, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 300, 500));
 
-        jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/favicon.png"))); // NOI18N
-        jLabel1.setText("BARBOSOFT");
-        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+        logo_nom_empresa.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
+        logo_nom_empresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/favicon.png"))); // NOI18N
+        logo_nom_empresa.setText("BARBOSOFT");
+        bg.add(logo_nom_empresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
+
+        inici_sessio.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
+        inici_sessio.setText("INICIAR SESSIÓ");
+        bg.add(inici_sessio, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 150, -1, -1));
+
+        usuariLabel.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
+        usuariLabel.setText("USUARI");
+        bg.add(usuariLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+
+        usuariTextField.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        usuariTextField.setForeground(new java.awt.Color(204, 204, 204));
+        usuariTextField.setText("Introdueixi el seu usuari");
+        usuariTextField.setBorder(null);
+        bg.add(usuariTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 340, 30));
+        bg.add(nomSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 340, -1));
+        bg.add(passSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, 340, -1));
+
+        passLabel.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
+        passLabel.setText("CONTRASENYA");
+        bg.add(passLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, -1, -1));
+
+        passwordField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        passwordField.setForeground(new java.awt.Color(204, 204, 204));
+        passwordField.setText("jPasswordField1");
+        passwordField.setBorder(null);
+        bg.add(passwordField, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, 340, 30));
+
+        entrarPanel.setBackground(new java.awt.Color(0, 134, 190));
+        entrarPanel.setFont(new java.awt.Font("Rockwell Condensed", 0, 14)); // NOI18N
+        entrarPanel.setName(""); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("ENTRAR");
+
+        javax.swing.GroupLayout entrarPanelLayout = new javax.swing.GroupLayout(entrarPanel);
+        entrarPanel.setLayout(entrarPanelLayout);
+        entrarPanelLayout.setHorizontalGroup(
+            entrarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+        );
+        entrarPanelLayout.setVerticalGroup(
+            entrarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
+        );
+
+        bg.add(entrarPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 110, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -113,8 +171,17 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
     private javax.swing.JLabel citybg;
+    private javax.swing.JPanel entrarPanel;
+    private javax.swing.JLabel inici_sessio;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel logo;
+    private javax.swing.JLabel logo_nom_empresa;
     private javax.swing.JLabel logoname;
+    private javax.swing.JSeparator nomSeparator;
+    private javax.swing.JLabel passLabel;
+    private javax.swing.JSeparator passSeparator;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JLabel usuariLabel;
+    private javax.swing.JTextField usuariTextField;
     // End of variables declaration//GEN-END:variables
 }
