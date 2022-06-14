@@ -27,17 +27,49 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bg = new javax.swing.JPanel();
+        logoname = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        citybg = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        bg.setBackground(new java.awt.Color(255, 255, 255));
+        bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        logoname.setFont(new java.awt.Font("Roboto Medium", 0, 24)); // NOI18N
+        logoname.setForeground(new java.awt.Color(255, 255, 255));
+        logoname.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoname.setText("BARBOSOFT");
+        bg.add(logoname, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 300, -1));
+
+        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        bg.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 110, 300, -1));
+
+        citybg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        citybg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/city.png"))); // NOI18N
+        bg.add(citybg, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 300, 500));
+
+        jLabel1.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/favicon.png"))); // NOI18N
+        jLabel1.setText("BARBOSOFT");
+        bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(bg, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +111,10 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel bg;
+    private javax.swing.JLabel citybg;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel logoname;
     // End of variables declaration//GEN-END:variables
 }
